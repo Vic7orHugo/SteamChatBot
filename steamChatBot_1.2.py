@@ -21,7 +21,7 @@ STATUS_ON = 'BOT RUNNING...'
 STATUS_OFF = 'BOT OFFLINE'
 USER_AWAY_STATUS = 'USER AWAY'
 USER_ONLINE_STATUS = 'USER ONLINE'
-AFK_TIME = 5		# Time in seconds
+AFK_TIME = 10*60		# Time in seconds
 
 # Chance to exit code
 gui.PAUSE = 0.1
