@@ -6,5 +6,7 @@ If someone even come to see this and have some way to improve it, please let me 
 Also, feel free to take the code, I don't mind. Although, I don't think it has any use for you XD.
 
 Thanks for helping me test this bot:
+
 Billy
+
 Brunin (TurTle)
