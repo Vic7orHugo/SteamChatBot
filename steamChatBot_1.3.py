@@ -1,6 +1,6 @@
 #! python3
 """
-steamChatBot_1.2.py - Bot to automatically answer steam chat notifications.
+steamChatBot_1.3.py - Bot to automatically answer steam chat notifications.
 12/01/2018 at 10:00
 """
 
@@ -68,8 +68,9 @@ try:
 		# Clicks the steam chat window popup or the steam app icon	
 		steamChatLocation = gui.center(steamChatNotification)
 		gui.click(steamChatLocation[0], steamChatLocation[1])							
-		time.sleep(5)		# Delay to process the latest action
 		# Clicks on the field to enter the text
+		while gui.locateOnScreen(STEAM_CHAT_TEXT_FIELD) == None:
+			time.sleep(0.5)
 		steamChatTextField = gui.locateOnScreen(STEAM_CHAT_TEXT_FIELD)
 		steamChatTextFieldLocation = gui.center(steamChatTextField)
 		gui.click(steamChatTextFieldLocation[0], steamChatTextFieldLocation[1])			
@@ -82,7 +83,6 @@ try:
 		steamChatWindowOptions = gui.locateOnScreen(STEAM_CHAT_WINDOW_OPTIONS)
 		steamChatWindowOptionsLocation = gui.center(steamChatWindowOptions)
 		gui.click(steamChatWindowOptionsLocation[0], steamChatWindowOptionsLocation[1])	# Goes back to the previous window
-		#gui.click(SHOW_DESKTOP[0], SHOW_DESKTOP[1])		# Goes to the desktop
 		gui.moveTo(mousePosX, mousePosY)				# Moves the cursor to the original position
 		steamChatNotification = None
 		time.sleep(5)	# Waits 5 seconds, so the bot doenst flood the chat in case the other user sends to much messages
